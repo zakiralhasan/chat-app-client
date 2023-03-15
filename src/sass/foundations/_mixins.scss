@@ -1,0 +1,9 @@
+@mixin clear-border {
+  outline: none;
+  border: none;
+}
+@mixin get-item-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+.receive-container {
+  // border: 1px solid red;
+  display: flex;
+  border-radius: 5%;
+  margin-top: 0.7rem;
+  span {
+    background-color: rgb(12, 175, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    padding: 3px;
+    border-bottom-left-radius: 20px;
+  }
+}
+.receive-msg {
+  background-color: $white;
+  width: 15rem;
+  padding: 1rem;
+  border-top-right-radius: 30px;
+}

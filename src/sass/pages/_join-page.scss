@@ -1,0 +1,19 @@
+.join-container {
+  margin-top: 20vh;
+  h2 {
+    color: rgb(16, 73, 231);
+    margin: 1rem auto;
+  }
+  input {
+    outline: none;
+    padding: 5px 5px;
+    border: none;
+    background-color: #f4f1eb;
+  }
+  button {
+    @extend input;
+    background-color: $btn-color;
+    color: $white;
+    cursor: pointer;
+  }
+}

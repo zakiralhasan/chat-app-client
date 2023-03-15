@@ -1,0 +1,33 @@
+.chat-container {
+  padding: 5px;
+}
+.chat-container__heading {
+  height: 15vh;
+  background-color: rgb(206, 227, 240);
+  @include get-item-center;
+  color: $gray;
+}
+.chat-container__chat-box {
+  height: 70vh;
+  background-color: #f4f1eb;
+  padding: 0.5rem;
+  overflow-y: scroll;
+}
+.chat-container__input-field {
+  height: 15vh;
+  display: flex;
+  input {
+    flex-basis: 70%;
+    padding-left: 3rem;
+    @include clear-border;
+    font-size: $fs-normal;
+  }
+  button {
+    flex-basis: 30%;
+    @include clear-border;
+    background-color: $btn-color;
+    cursor: pointer;
+    color: $white;
+    font-size: $fs-large;
+  }
+}
