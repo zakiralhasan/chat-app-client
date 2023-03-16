@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router';
+import ScrollableFeed from 'react-scrollable-feed';
 import { io } from "socket.io-client";
 import ReceiveMsg from '../components/ReceiveMsg';
-// import ReceiveMsg from '../components/ReceiveMsg';
 import SendMsg from '../components/SendMsg';
 
 
@@ -51,21 +51,21 @@ const ChattingPage = (name) => {
                 <h1>Chatting With Friends...</h1>
             </div>
             <div className='chat-container__chat-box'>
+                <ScrollableFeed>
+                    {
+                        allMsg?.map((message, i) => {
+                            return (<div key={i}>
+                                {
+                                    message.id === socket.id ?
+                                        <SendMsg key={message?.id} message={message} ></SendMsg>
+                                        :
+                                        <ReceiveMsg key={message?.id} message={message} ></ReceiveMsg>
+                                }
 
-                {
-                    allMsg?.map((message, i) => {
-                        return (<div key={i}>
-                            {
-                                message.id === socket.id ?
-                                    <SendMsg key={message?.id} message={message} ></SendMsg>
-                                    :
-                                    <ReceiveMsg key={message?.id} message={message} ></ReceiveMsg>
-                            }
-
-                        </div>)
-                    })
-                }
-
+                            </div>)
+                        })
+                    }
+                </ScrollableFeed>
             </div>
             <div className='chat-container__input-field'>
                 <input type="text" ref={ref} placeholder='Enter your message' onChange={(e) => setMsg(e.target.value)} />

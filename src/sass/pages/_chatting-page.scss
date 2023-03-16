@@ -10,8 +10,9 @@
 .chat-container__chat-box {
   height: 70vh;
   background-color: #f4f1eb;
-  padding: 0.5rem;
-  overflow-y: scroll;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.7rem;
 }
 .chat-container__input-field {
   height: 15vh;

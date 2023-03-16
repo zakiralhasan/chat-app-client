@@ -94,6 +94,7 @@ menu {
   width: 15rem;
   padding: 1rem;
   margin-top: 0.7rem;
+  margin-bottom: 0.3rem;
   border-radius: 5%;
   display: flex;
   flex-direction: row-reverse;
@@ -103,7 +104,8 @@ menu {
 .receive-container {
   display: flex;
   border-radius: 5%;
-  margin-top: 0.7rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.7rem;
 }
 .receive-container span {
   background-color: rgb(12, 175, 12);
@@ -160,8 +162,9 @@ menu {
 .chat-container__chat-box {
   height: 70vh;
   background-color: #f4f1eb;
-  padding: 0.5rem;
-  overflow-y: scroll;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.7rem;
 }
 
 .chat-container__input-field {
